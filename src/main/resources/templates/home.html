@@ -5,14 +5,40 @@
 	<head>
 		<title>Sistema de Vendas</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"></link>
+		<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"></link>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
 	</head>
-	<body>
-		<h1>Bem vindo</h1>
-		
-		<p>Clique <a th:href="@{/logado}">Aqui</a> Para fazer login.</p>
-		
+	<body class="grey lighten-5">
+	
+	<!-- criando um design legalzinho -->
+		<nav>
+			<div class="nav-wrapper red darken-4">
+				<a href="#" class="brand-logo" style="margin-left: 1.2em; text-shadow: 4px 4px 13px rgba(0, 0, 0, 0.94);">MercadinhoTop</a>
+				<a href="#" data-activates="mobile-demo" class="button-collapse">
+					<i class="material-icons">menu</i>
+				</a>
+			</div>
+		</nav>
 		<!-- scripts -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+      	
+      	<!-- script pessoal -->
+      	<script type="text/javascript">
+      			
+      	</script>
+      	
+      	<style>
+      	/*Estilos próprios da página*/
+      	html{
+      		line-height: 1.5;
+      	}
+      	
+      	.brand-logo{
+      		font-family: 'Kaushan Script', cursive;
+      	}
+      	</style>
+      	
 	</body>
 </html>
