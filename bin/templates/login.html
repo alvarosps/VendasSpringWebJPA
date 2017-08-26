@@ -7,6 +7,7 @@
       	<title>Sistema Online de Vendas</title>
       	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"></link>
+      	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet"></link>
       	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
       </head>
       
@@ -15,9 +16,46 @@
       <div class="section">
       	<main>
       		<center>
-      			<img class="responsive-img" style="width: 250px;" src="https://i.imgur.com/ax0NCsK.gif" />
+      			<h3 class="logo">MercadinhoTop</h3>
+      			<h5 class="texto">Por favor, digite o seus dados de login.</h5>
+      			
+      			<!-- formulario de login -->
+      			<div class="section"></div>
+      			
+      			<div class="container">
+      				<div class="z-depth-1 white row logform">
+      					<form class="col s12" action="" method="post">
+      						<div class="row">
+      							<div class="col s12">
+      							</div>
+      						</div>
+      						
+      						<div class="row">
+      							<div class="input-field col s12">
+      								<input class="validate" type="text"/>
+      								<label for="usuario">Usuário:</label>
+      							</div>
+      						</div>
+      						
+      						<div class="row">
+      							<div class="input-field col s12">
+      								<input class="validate" type="password"/>
+      								<label for="senha">Senha</label>
+      							</div>
+      							
+      							<center>
+              						<div class='row'>
+                						<a href="#" class='col s12 btn btn-large waves-effect red darken-4'>Entrar</a>
+              						</div>
+            					</center>
+      						</div>
+      					</form>
+      				</div>
+      			</div>
+      			
       		</center>
       		<div class="section"></div>
+      		
       	</main>
       </div>
       
@@ -35,6 +73,22 @@
       	
       	body{
       		background: #eee;
+      	}
+      	
+      	.texto{
+      		color : #bf360c;
+      	}
+      	
+      	.logo{
+      		text-shadow: 4px 4px 13px rgba(0, 0, 0, 0.94);
+      		font-family: 'Kaushan Script', cursive;
+      		color: white;
+      	}
+      	
+      	.logform{
+      		display: inline-block;
+      		padding: 32px 48px 0 48px;
+      		
       	}
       	
       	.input-field input[type=date]:focus + label,
