@@ -45,8 +45,8 @@
 			z-index: 2;
 		}
 		
-		.form-signin input[type="email"] {
-			margin-bottom: -1px;
+		.form-signin input[type="text"] {
+			margin-bottom: 4px;
 			border-bottom-right-radius: 0;
 			border-bottom-left-radius: 0;
 		}
@@ -56,10 +56,35 @@
 			border-top-left-radius: 0;
 			border-top-right-radius: 0;
 		}
+		
+		.box{
+			width: 40%;
+		}
 	</style>
 
 	<!-- conteudo da pagina -->
-	
+	<div class="container box">
+		
+		<div class="alert alert-danger" role="alert" th:if="${param.error}">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    			<span aria-hidden="true">&times;</span>
+  			</button>
+			<strong>Erro!</strong> Usuário ou senha inválidos!
+		</div>
+		
+		<form class="form-signin" th-action="@{/logged}" method="post">
+			<h2 class="form-signin-heading">Entrar no sistema</h2>
+			
+			<label for="user" class="sr-only">Usuário:</label>
+			<input type="text" id="user" class="form-control" placeholder="usuario"/>
+			
+			<label for="password" class="sr-only">Usuário:</label>
+			<input type="password" id="password" class="form-control" placeholder="senha"/>
+			
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+		</form>
+		
+	</div>
 
 	<!-- carregando jquery -->
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
@@ -77,6 +102,15 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
 		integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
 		crossorigin="anonymous"></script>
+		
+	<!-- funções personalizadas -->
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			$(".alert").alert()
+		});
+		
+	</script>
 
 </body>
 </html>
