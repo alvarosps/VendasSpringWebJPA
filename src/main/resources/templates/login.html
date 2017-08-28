@@ -72,6 +72,13 @@
 			<strong>Erro!</strong> Usuário ou senha inválidos!
 		</div>
 		
+		<div class="alert alert-success" role="alert" th:if="${param.logout}">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    			<span aria-hidden="true">&times;</span>
+  			</button>
+			<strong>Aviso!</strong> Você foi deslogado!
+		</div>
+		
 		<form class="form-signin" th-action="@{/logged}" method="post">
 			<h2 class="form-signin-heading">Entrar no sistema</h2>
 			
@@ -105,11 +112,9 @@
 		
 	<!-- funções personalizadas -->
 	<script type="text/javascript">
-	
 		$(document).ready(function(){
 			$(".alert").alert()
 		});
-		
 	</script>
 
 </body>

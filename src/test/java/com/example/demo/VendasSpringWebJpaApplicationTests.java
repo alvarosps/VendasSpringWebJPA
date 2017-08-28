@@ -52,7 +52,7 @@ public class VendasSpringWebJpaApplicationTests {
 	
 	@Test
     public void accessSecuredResourceUnauthenticatedThenRedirectsToLogin() throws Exception {
-        mock.perform(get("/logged"))
+        mock.perform(get("/logado"))
             .andExpect(status().is3xxRedirection())
             .andExpect(redirectedUrlPattern("**/login"));
 	}
@@ -60,7 +60,7 @@ public class VendasSpringWebJpaApplicationTests {
 	@Test
     @WithMockUser
     public void accessSecuredResourceAuthenticatedThenOk() throws Exception {
-        mock.perform(get("/logged"))
+        mock.perform(get("/logado"))
                 .andExpect(status().isOk());
     }
 
