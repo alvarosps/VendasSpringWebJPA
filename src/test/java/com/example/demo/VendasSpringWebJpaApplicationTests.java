@@ -27,17 +27,17 @@ public class VendasSpringWebJpaApplicationTests {
 	@Test
 	public void oginWithValidUserThenAuthenticated() throws Exception{
 		FormLoginRequestBuilder login = formLogin()
-				.user("usuario")
-				.password("senha");
+				.user("user")
+				.password("password");
 			mock.perform(login)
-	            .andExpect(authenticated().withUsername("usuario"));
+	            .andExpect(authenticated().withUsername("user"));
 	}
 	
 	@Test
 	public void loginWithInvalidUserThenUnauthenticated() throws Exception{
 		FormLoginRequestBuilder login = formLogin()
-	            .user("invalido")
-	            .password("senhainvalida");
+	            .user("invalid")
+	            .password("invalidpassword");
 
 	        mock.perform(login)
 	            .andExpect(unauthenticated());
@@ -51,7 +51,7 @@ public class VendasSpringWebJpaApplicationTests {
 	
 	@Test
     public void accessSecuredResourceUnauthenticatedThenRedirectsToLogin() throws Exception {
-        mock.perform(get("/hello"))
+        mock.perform(get("/logged"))
             .andExpect(status().is3xxRedirection())
             .andExpect(redirectedUrlPattern("**/login"));
 	}
@@ -59,7 +59,7 @@ public class VendasSpringWebJpaApplicationTests {
 	@Test
     @WithMockUser
     public void accessSecuredResourceAuthenticatedThenOk() throws Exception {
-        mock.perform(get("/logado"))
+        mock.perform(get("/logged"))
                 .andExpect(status().isOk());
     }
 
