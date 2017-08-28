@@ -22,6 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc
 public class VendasSpringWebJpaApplicationTests {
 	
+	@Autowired
 	private MockMvc mock;
 	
 	@Test
