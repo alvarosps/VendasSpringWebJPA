@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+	<head>
+		<title>.: Mercadinho Top - Home :.</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"></link>
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
+	</head>
+	<body>
+	
+		<!-- criando uma navbar basica -->
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded" style="background-color: #d50000">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand logo" href="#">MercadinhoTop</a>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link  text-white" href="#">Sobre</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link  text-white" href="#">Serviços</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link  text-white" href="#">Contato</a>
+		      </li>
+    		</ul>
+  		</div>
+		</nav>
+		
+		<!-- corpo da página -->
+		<div class="container" id="home">
+			<h3 class="text-center my-5">Bem vindo!</h3>
+			<p>Este é o site oficial do MercadinhoTop. Aqui você vai encontrar todas ofertas da semanas em nossos produto. Agora
+			você poder fazer suas compras online e recebê-las no conforto de sua casa.</p>
+			<p>Clique <a href="login.html">Aqui</a> para fazer login no nosso sistema de compras!</p>
+			
+			
+			
+		</div>
+		
+		<style>
+			.logo{
+				color: #b71c1c;
+			}
+			
+			.navbar-brand{
+				font-family: 'Lobster', cursive;
+				font-size: 1.5em;
+			}
+			
+			p{
+				line-height: 1.5;
+			}
+			
+			
+			p a{
+				color: #d5000;
+			}
+			
+		</style>
+	
+	
+		<!-- carregando jquery -->
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		
+		<!-- tether.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		
+		<!-- carregando bootstrap -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		
+	</body>
+</html>
