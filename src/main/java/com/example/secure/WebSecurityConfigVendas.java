@@ -15,8 +15,9 @@ public class WebSecurityConfigVendas extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception{
 		
 		http
+		.csrf().disable()
         .authorizeRequests()
-            .antMatchers("/", "/home", "/produtos").permitAll()
+            .antMatchers("/", "/home").permitAll()
             .anyRequest().authenticated()
             .and()
         .formLogin()
