@@ -16,7 +16,7 @@ public class WebSecurityConfigVendas extends WebSecurityConfigurerAdapter {
 		
 		http
         .authorizeRequests()
-            .antMatchers("/", "/home").permitAll()
+            .antMatchers("/", "/home", "/produtos").permitAll()
             .anyRequest().authenticated()
             .and()
         .formLogin()
@@ -31,6 +31,6 @@ public class WebSecurityConfigVendas extends WebSecurityConfigurerAdapter {
 	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
 		auth
 			.inMemoryAuthentication()
-				.withUser("usuario").password("senha").roles("USER");
+				.withUser("user").password("password").roles("USER");
 	}
 }
