@@ -11,7 +11,9 @@
 	
 		<!-- estilos da página -->
 		<style>
-			
+			.navbar{
+				border-bottom: 2px solid #771925;
+			}
 			
 		</style>
 	
@@ -21,7 +23,7 @@
 				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<a class="navbar-brand" href="#">Dasboard</a>
+				<a class="navbar-brand" href="#"><span style="font-family:'Lobster', sans-serif; font-size: 1.5em; color: #771925">Dashboard</span></a>
 				<div class="collapse navbar-collapse" id="navbarNavDropdown">
 					<ul class="navbar-nav">
 						<li class="nav-item dropdown">
@@ -42,7 +44,7 @@
 						</li>
 						<li>
 							<form th:action="@{/logout}" method="post">
-								<input type="submit" class="btn btn-default" value="Logout"/>
+								<input type="submit" class="btn btn-default right" value="Logout"/>
 							</form>
 						</li>
 					</ul>
