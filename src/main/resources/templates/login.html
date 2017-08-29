@@ -9,6 +9,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
 	integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
 	crossorigin="anonymous"></link>
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet"></link>
 </head>
 <body>
 
@@ -79,14 +80,14 @@
 			<strong>Aviso!</strong> Você foi deslogado!
 		</div>
 		
-		<form class="form-signin" th-action="@{/logged}" method="post">
-			<h2 class="form-signin-heading">Entrar no sistema</h2>
+		<form class="form-signin" th:action="@{/login}" method="POST">
+			<h2 class="form-signin-heading text-center">Entrar no sistema  | <span style="font-family: 'Lobster', cursive;"> MercadinhoTop </span></h2>
 			
-			<label for="user" class="sr-only">Usuário:</label>
-			<input type="text" id="user" class="form-control" placeholder="usuario"/>
+			<label for="username" class="sr-only">Usuário:</label>
+			<input type="text" name="username" class="form-control" placeholder="usuario"/>
 			
 			<label for="password" class="sr-only">Usuário:</label>
-			<input type="password" id="password" class="form-control" placeholder="senha"/>
+			<input type="password" name="password" class="form-control" placeholder="senha"/>
 			
 			<button class="btn btn-lg btn-danger btn-block" type="submit">Entrar</button>
 		</form>
