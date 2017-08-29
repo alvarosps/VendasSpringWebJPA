@@ -11,12 +11,31 @@
 	
 		<!-- estilos da página -->
 		<style>
+			.nav-link{
+				color: #8c0b1c;
+			}
+			
+			.active{
+			background: #8c0b1c;
+			color: #fff;
+			}
 			
 		</style>
 	
-		<!-- criando barra lateral com opcoes para o usuario -->
-		
-		
+		<!-- barra de abas contendo os menus -->
+		<div class="container white my-5">
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Início</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Produtos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Vendas</a>
+				</li>
+			</ul>
+		</div>
 	
 		<!-- carregando jquery -->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
