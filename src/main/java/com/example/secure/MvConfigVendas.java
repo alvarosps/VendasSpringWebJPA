@@ -13,6 +13,8 @@ public class MvConfigVendas extends WebMvcConfigurerAdapter{
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/").setViewName("home");
         registry.addViewController("/logged").setViewName("logged");
+        //registry.addViewController("/listaproduto").setViewName("listaprod");
+        //registry.addViewController("/cadproduto").setViewName("cadproduto");
         registry.addViewController("/login").setViewName("login");
     }
 	
