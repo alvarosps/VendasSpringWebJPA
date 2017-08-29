@@ -11,31 +11,38 @@
 	
 		<!-- estilos da página -->
 		<style>
-			.nav-link{
-				color: #8c0b1c;
-			}
 			
-			.active{
-			background: #8c0b1c;
-			color: #fff;
-			}
 			
 		</style>
 	
 		<!-- barra de abas contendo os menus -->
 		<div class="container white my-5">
-			<ul class="nav nav-tabs">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Início</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Produtos</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Vendas</a>
-				</li>
-				
-			</ul>
+			<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand" href="#">Dasboard</a>
+				<div class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Produtos</a>
+							<div class="dropdown-menu" arial-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">Cadastrar Produto</a>
+								<a class="dropdown-item" href="#">Consultar produto</a>
+								<a class="dropdown-item" href="#">Listar Produtos</a>
+								
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vendas</a>
+							<div class="dropdown-menu" arial-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="#">Nova venda</a>
+								<a class="dropdown-item" href="#">Listar vendas</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
 		</div>
 	
 		<!-- carregando jquery -->
