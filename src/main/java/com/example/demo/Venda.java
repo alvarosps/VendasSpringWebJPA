@@ -17,46 +17,32 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-//criando tabela Venda
 @Entity
-@Table(name="vendas")
-public class Venda{
-	
+@Table(name="Vendas")
+public class Venda {
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq_venda")
-	@SequenceGenerator(name="seq_venda", sequenceName="seq_venda", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_VENDA")
+    @SequenceGenerator(name="SEQ_VENDA", sequenceName="SEQ_VENDA", initialValue = 1, allocationSize = 1)
 	private int id;
-	
-	@OneToMany(fetch=FetchType.EAGER, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+	//@Column(columnDefinition="DATE")
+	//private LocalDate data;
+	@OneToMany(fetch=FetchType.EAGER, cascade= {CascadeType.PERSIST,CascadeType.MERGE})
 	@JoinColumn(name = "venda_id")
 	private List<ItemDeVenda> itensDeVenda;
-
-	//gets e sets
+	
 	public int getId() {
 		return id;
 	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
+	
 	public List<ItemDeVenda> getItensDeVenda() {
 		return itensDeVenda;
 	}
-
-	public void setItensDeVenda(List<ItemDeVenda> itensDeVenda) {
-		this.itensDeVenda = itensDeVenda;
-	}
-	
-	//operação de vendas
 	public void vender(Produto prod, int quant) {
 		ItemDeVenda item = new ItemDeVenda();
 		item.setProduto(prod);
 		item.setQuantidade(quant);
 		itensDeVenda.add(item);
 	}
-	
-	//calculando o total das vendas
 	public double getTotal() {
 		double soma = 0.0;
 		for(ItemDeVenda item : itensDeVenda) {

@@ -10,46 +10,39 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-//tabela com nome de produtos
 @Entity
-@Table(name="produtos")
-public class Produto{
+@Table(name = "Produtos")
+public class Produto {
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq_produto")
-	@SequenceGenerator(name="seq_produto", sequenceName="seq_produto", initialValue=1, allocationSize=1)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PRODUTO")
+	@SequenceGenerator(name = "SEQ_PRODUTO", sequenceName = "SEQ_PRODUTO", initialValue = 1, allocationSize = 1)
 	private int id;
-	
-	//o campo nome deverá ter no mínimo 2 caracteres ou nao pode ficar vazio
 	@NotNull
-	@Size(min=2, max=30)
+	@Size(min = 2, max = 30)
 	private String nome;
-	
-	//o campo preco nao pode ficar vazio nem ter valor menor que 1
 	@NotNull
 	@Min(1)
 	private double preco;
-	
-	//construtor vazio da classe produto
-	public Produto() {}
-	
-	//construtor inicializando os valores dos atributos
+
+	public Produto() {
+	}
+
 	public Produto(int id, String nome, double preco) {
 		this.id = id;
 		this.nome = nome;
 		this.preco = preco;
 	}
-	
-	//metodos get e set dos atributos(propriedades)
+
 	public int getId() {
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public String getNome() {
 		return nome;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public void setNome(String nome) {
@@ -60,8 +53,7 @@ public class Produto{
 		return preco;
 	}
 
-	public void setPreco(double preco) {
-		this.preco = preco;
+	public void setPreco(double valor) {
+		preco = valor;
 	}
-	
 }
