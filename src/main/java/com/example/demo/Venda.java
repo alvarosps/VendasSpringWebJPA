@@ -59,7 +59,6 @@ public class Venda{
 	//calculando o total das vendas
 	public double getTotal() {
 		double soma = 0.0;
-		
 		for(ItemDeVenda item : itensDeVenda) {
 			soma += item.getSubTotal();
 		}
