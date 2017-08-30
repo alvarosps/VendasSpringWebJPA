@@ -7,13 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="ItensDeVenda")
 public class ItemDeVenda {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="SEQ_ITEMVENDA")
+    @SequenceGenerator(name="SEQ_ITEMVENDA", sequenceName="SEQ_ITEMVENDA", initialValue = 1, allocationSize = 1)
 	private int id;
 	@ManyToOne(fetch=FetchType.EAGER)
 	private Produto produto;

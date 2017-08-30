@@ -7,3 +7,4 @@ public interface ProdutoRepositorio {
 	Produto consultarPorId(int id);
 	List<Produto> consultarTodos();
 }
+

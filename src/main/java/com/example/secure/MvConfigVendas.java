@@ -1,7 +1,7 @@
 package com.example.secure;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -12,10 +12,10 @@ public class MvConfigVendas extends WebMvcConfigurerAdapter{
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/home").setViewName("home");
         registry.addViewController("/").setViewName("home");
-        registry.addViewController("/logged").setViewName("logged");
-        //registry.addViewController("/listaproduto").setViewName("listaprod");
-        //registry.addViewController("/cadproduto").setViewName("cadproduto");
+        registry.addViewController("/hello").setViewName("hello");
         registry.addViewController("/login").setViewName("login");
+        registry.addViewController("/produtos").setViewName("produtos");
+        
     }
 	
 }
