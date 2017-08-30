@@ -48,5 +48,21 @@ public class Venda{
 		this.itensDeVenda = itensDeVenda;
 	}
 	
+	//operação de vendas
+	public void vender(Produto prod, int quant) {
+		ItemDeVenda item = new ItemDeVenda();
+		item.setProduto(prod);
+		item.setQuantidade(quant);
+		itensDeVenda.add(item);
+	}
 	
+	//calculando o total das vendas
+	public double getTotal() {
+		double soma = 0.0;
+		
+		for(ItemDeVenda item : itensDeVenda) {
+			soma += item.getSubTotal();
+		}
+		return soma;
+	}
 }
